@@ -1,0 +1,132 @@
+@use "./keyframe.scss" as keyframe;
+
+:root {
+  font-size: 10px;
+  --color-lightgray: #eee;
+  --color-blue: #8aa5b2;
+  --color-blue-dark: #6e8e9e;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-drag: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+@mixin backgroundImageCenter {
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin buttonBoxShadow {
+  box-shadow: 0 1px 3px #505050;
+}
+
+@mixin cardBoxShadow {
+  box-shadow: 0 30px 50px rgb(80, 80, 80);
+}
+
+html,
+body {
+  width: 100dvw;
+  height: 100dvh;
+  background-color: var(--color-lightgray);
+  @include flexCenter;
+
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-lightgray);
+  @include flexCenter;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  inset: 0;
+  @include backgroundImageCenter;
+}
+
+.btn-grp {
+  position: absolute;
+  @include flexCenter;
+  gap: 2rem;
+  bottom: clamp(5rem, 25%, 20rem);
+  width: 100%;
+}
+
+.btn {
+  width: 5rem;
+  aspect-ratio: 1;
+  @include flexCenter;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: var(--color-blue);
+  @include buttonBoxShadow;
+  font-size: 3rem;
+}
+
+.btn:active {
+  background-color: var(--color-blue-dark);
+  box-shadow: none;
+}
+
+.card {
+  width: 20rem;
+  aspect-ratio: 2/3;
+  @include backgroundImageCenter;
+  @include cardBoxShadow;
+  position: absolute;
+  transition: 0.5s;
+}
+
+.card-group {
+  position: relative;
+  @include flexCenter;
+  gap: 2rem;
+  left: 50%;
+  width: 50%;
+  height: 30%;
+
+  :nth-child(1) {
+    opacity: 0;
+    left: calc(-22rem + (20rem + 2rem) * 0);
+  }
+
+  :nth-child(2) {
+    left: calc(-22rem + (20rem + 2rem) * 1);
+  }
+
+  :nth-child(3) {
+    left: calc(-22rem + (20rem + 2rem) * 2);
+  }
+
+  :nth-child(4) {
+    left: calc(-22rem + (20rem + 2rem) * 3);
+  }
+
+  :nth-child(n + 5) {
+    opacity: 0;
+    left: calc(-22rem + (20rem + 2rem) * 4);
+  }
+
+}

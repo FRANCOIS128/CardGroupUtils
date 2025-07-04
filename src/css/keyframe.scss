@@ -1,0 +1,27 @@
+@keyframes sideIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes sideOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.backgroundIn {
+  animation: sideIn 0.5s ease-in-out forwards;
+}
+
+.backgroundOut {
+  animation: sideOut 0.5s ease-in-out forwards;
+}

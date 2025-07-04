@@ -1,0 +1,62 @@
+{
+  "images": [
+    {
+      "id": 1,
+      "address": "/images/1.jpeg"
+    },
+    {
+      "id": 2,
+      "address": "/images/2.jpeg"
+    },
+    {
+      "id": 3,
+      "address": "/images/3.jpeg"
+    },
+    {
+      "id": 4,
+      "address": "/images/4.jpeg"
+    },
+    {
+      "id": 5,
+      "address": "/images/5.jpeg"
+    },
+    {
+      "id": 6,
+      "address": "/images/6.jpeg"
+    }
+  ],
+  "buttons": [
+    {
+      "id": 1,
+      "classList": [
+        "double-left",
+        "uil",
+        "uil-angle-double-left"
+      ]
+    },
+    {
+      "id": 2,
+      "classList": [
+        "left",
+        "uil",
+        "uil-angle-left"
+      ]
+    },
+    {
+      "id": 3,
+      "classList": [
+        "right",
+        "uil",
+        "uil-angle-right"
+      ]
+    },
+    {
+      "id": 4,
+      "classList": [
+        "double-right",
+        "uil",
+        "uil-angle-double-right"
+      ]
+    }
+  ]
+}
